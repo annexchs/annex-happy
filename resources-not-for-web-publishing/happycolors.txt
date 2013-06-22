@@ -1,0 +1,9 @@
+Happy Colors
+
+ORANGE: #F47B1F
+
+PURPLE: #612FC8
+
+YELLOW: #F8D13A
+
+GREY: #595959
