@@ -25,12 +25,12 @@
 	</div>
 
 <!--NAVIGATION BAR-->
-<div class="happyLogoContainer sticky">
+<div id="happysticky" class="happyLogoContainer" >
   <div class="happyLogo"> </div>
 </div>
 <div class="contain-to-grid sticky">
 
-<nav class="top-bar">
+<nav class="top-bar" >
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name happyLogoPlaceholder">
@@ -206,6 +206,10 @@
   '.js><\/script>')
   </script>
   
+  <script src="javascripts/vendor/jquery.js"></script>
+
+  <script src="javascripts/other/jquery.sticky.js"></script>
+
   <script src="javascripts/foundation/foundation.js"></script>
 	
 	<script src="javascripts/foundation/foundation.section.js"></script>
@@ -236,6 +240,11 @@
 	
 	<script src="javascripts/foundation/foundation.joyride.js"></script>
 	
+  <script>
+    $(window).load(function(){
+      $("#happysticky").sticky({ topSpacing: 0 });
+    });
+  </script>
   
   <script>
     $(document).foundation();
