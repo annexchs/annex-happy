@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--Designed and Developed by Annex Studio, LLC, Charleston, S.C. - www.annexstudio.com-->
 <!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
@@ -26,15 +25,20 @@
 
 <!--NAVIGATION BAR-->
 <div class="happyLogoContainer sticky">
-  <div class="happyLogo"> </div>
+  <div class="happyLogo"></div>
 </div>
 <div class="contain-to-grid sticky">
 
 <nav class="top-bar">
   <ul class="title-area">
     <!-- Title Area -->
+<<<<<<< HEAD
     <li class="name happyLogoPlaceholder">
       
+=======
+    <li class="name">
+      <h1><a href="#">Happy</a></h1>
+>>>>>>> master
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
     <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
