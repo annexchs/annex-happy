@@ -2039,7 +2039,6 @@ p aside {
 /* line 181, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Passion One', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: bold;
   font-style: normal;
   color: #222222;
   text-rendering: optimizeLegibility;
