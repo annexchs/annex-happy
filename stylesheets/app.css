@@ -2415,8 +2415,8 @@ button, .button {
   padding-bottom: 0.8125em;
   padding-left: 1.5em;
   font-size: 1em;
-  background-color: #612fc8;
-  border-color: #482294;
+  background-color: #F47B1F;
+  border-color: #c26219;
   color: white;
 }
 /* line 123, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_buttons.scss */
@@ -4365,10 +4365,9 @@ form.custom .custom.disabled {
   margin: 0;
 }
 
-.happyLogoContainer > div {
+.happy-logo {
   height:130px;
-  max-width: 62.5em;
-  margin:0px auto;
+  width:255px;
   background-image: url('../images/happyLogo.png');
   background-position: top left;
   background-repeat: no-repeat;
@@ -4376,17 +4375,26 @@ form.custom .custom.disabled {
   z-index: 99;
 }
 
+.happy-logo-area {
+  max-width: 62.5em;
+  margin:0px auto;
+  background: transparent;
+  pointer-events: none;
+}
+
 .happyLogoContainer.fixed{
   position: fixed;
   bottom:0px;
   z-index: 99;
+  pointer-events: none;
 }
 
 .happyLogoContainer {
   width:100%;
   position: relative;
   z-index: 99;
-
+  background: transparent;
+  pointer-events: none;
 }
 
 .happyLogoPlaceholder{
@@ -4520,7 +4528,7 @@ form.custom .custom.disabled {
 }
 /* line 252, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
-  background: #612fc8;
+  background: #F47B1F;
   font-size: 0.8125em;
 }
 /* line 255, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
