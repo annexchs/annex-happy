@@ -6695,3 +6695,8 @@ a.th {
 .f-dropdown.large {
   max-width: 800px;
 }
+
+/* Custom Stuff */
+.fur {
+  background-image: url('../images/fur-texture-purple.jpg');
+}
