@@ -2051,6 +2051,10 @@ h1.white {
   color: white;
 }
 
+h2.purple {
+  color: #612FC8;
+}
+
 h1.black {
   color: black;
 }
@@ -2448,7 +2452,7 @@ button, .button {
 }
 /* line 123, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #2284a1;
+  background-color: #d96d1a;
 }
 /* line 134, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -4544,8 +4548,9 @@ form.custom .custom.disabled {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-size: 0.8125em;
-  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-family: "Passion One", "Helvetica Neue", "Helvetica", sans-serif;
   background: #612FC8;
 }
 /* line 246, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
@@ -6733,5 +6738,8 @@ a.th {
 
 /* Custom Stuff */
 .fur {
-  background-image: url('../images/fur-texture-purple.jpg');
+  background-image: url('../images/textures/fabric_@2X.png');
+}
+
+#iphone-element{
 }
