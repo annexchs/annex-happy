@@ -6741,5 +6741,9 @@ a.th {
   background-image: url('../images/textures/fabric_@2X.png');
 }
 
+.nofur {
+  background-color: #612FC8;
+}
+
 #iphone-element{
 }
