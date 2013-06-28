@@ -1,6 +1,7 @@
 Happy Colors
 
 ORANGE: #F47B1F
+hover: #d96d1a
 
 PURPLE: #612FC8
 
