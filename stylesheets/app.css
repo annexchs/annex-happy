@@ -2006,7 +2006,7 @@ td {
 /* Default Link Styles */
 /* line 151, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 a {
-  color: #2ba6cb;
+  color: #612FC8;
   text-decoration: none;
   line-height: inherit;
 }
@@ -2065,7 +2065,7 @@ h4.callout {
 /* line 191, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: #612FC8;
   line-height: 0;
 }
 
