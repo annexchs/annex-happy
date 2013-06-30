@@ -4750,7 +4750,7 @@ form.custom .custom.disabled {
   /* line 403, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
   .top-bar-section li a:not(.button) {
     padding: 0 15px;
-    line-height: 45px;
+    line-height: 65px;
     background: #612FC8;
   }
   /* line 407, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
@@ -6746,4 +6746,27 @@ a.th {
 }
 
 #iphone-element{
+  z-index: 99;
+}
+
+#iphone-element > img {
+  max-width: 300px;
+  padding-top: 25px;
+}
+
+#iphone-element > a {
+  width: 300px;
+  margin-top: 10px;
+}
+
+#iphone-element-sticky-wrapper{
+  position:absolute;
+  top:500px;
+  left:66.6666%;
+}
+
+@media only screen and (max-width: 767px) {
+  #iphone-element-sticky-wrapper{
+    display:none;
+  }
 }
