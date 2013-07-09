@@ -6770,3 +6770,7 @@ a.th {
     display:none;
   }
 }
+
+.blank {
+  display:none;
+}
