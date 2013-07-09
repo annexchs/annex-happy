@@ -432,6 +432,9 @@ body {
 /* line 249, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
 body {
   background: white;
+  background-image: url('../assets/video-still-wide-bkg.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
   color: #222222;
   padding: 0;
   margin: 0;
@@ -6749,6 +6752,7 @@ a.th {
   z-index: 99;
 }
 
+
 #iphone-element > img {
   max-width: 300px;
   padding-top: 25px;
@@ -6761,7 +6765,7 @@ a.th {
 
 #iphone-element-sticky-wrapper{
   position:absolute;
-  top:500px;
+  top:480px;
   left:66.6666%;
 }
 
@@ -6769,6 +6773,29 @@ a.th {
   #iphone-element-sticky-wrapper{
     display:none;
   }
+}
+
+.video-spacer{
+  height:500px;
+}
+
+.video-spacer a{
+  width:250px;
+  height:250px;
+  background-image: url('../assets/play-button.png');
+  background-repeat: no-repeat;
+  background-position:center center;
+  position: absolute;
+  top:150px;
+  left:40%;
+}
+
+.video-spacer a:hover{
+    background-image: url('../assets/play-button-active.png');
+}
+
+#urlField, #emailField{
+  font-family: 'Passion One', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 .blank {
