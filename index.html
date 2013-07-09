@@ -98,7 +98,6 @@
 </div>
       </div>
     </div>
-  </div>
 <!-- End of Section 1 with Inset -->
 
 <!-- Start of Section 2 -->
@@ -121,8 +120,6 @@
 
         <h1><small>Your Peeps & Your Favorites</small></h1>
         <p>Lurem ipsoom dulur seet emet, cunsectetoor edeepiscing ileet. Um de hur de hur de hur. Murbee feetee-a ercoo noolla. Integer a fermentoom lurem, it hendrereet neesi. Soospendeesse-a nun messa neesi. </p>
-
-      </p>
     </div>
   </div>
 <!-- End of Section 2 -->
@@ -159,6 +156,10 @@
             <input type="text" placeholder="link" id = "urlField" />
             <input type="text" placeholder="email address" id = "emailField" />
             <input type="submit" value="Submit" class='button right'/>
+            <div class='blank'>
+              If you see this, leave this field blank.
+              <input type="text" name="comment" value="" id="comment"/>
+            </div>
           </form>
            
           <script type="text/javascript">
@@ -169,23 +170,31 @@
               var fromApp = new Boolean();
               var userTitle = 'Web Submission';
               var nameWeb = 'Web User';
-               
+              var userComment = $('#comment').val();
+
               var xhr = new XMLHttpRequest();
-              xhr.open("POST", "https://api.parse.com/1/classes/UserVideo", true);
-              xhr.setRequestHeader("X-Parse-Application-Id", "Q1jy5s6GeHfeK2yfaMjOiYpDLJhQ6bT6e9CpPiuI");
-              xhr.setRequestHeader("X-Parse-REST-API-Key", "hU6LGAL5789PBypEdScUWkNcnXXNv39SuzUSptNd");
-              xhr.setRequestHeader("Content-Type", "application/json");
-              xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4) {
-                  var result = JSON.parse(xhr.responseText);
-                  if (result.objectId) {
-                    alert("Created an object with id: " + result.objectId);
+
+              if (userComment === "") {
+                xhr.open("POST", "https://api.parse.com/1/classes/UserVideo", true);
+                xhr.setRequestHeader("X-Parse-Application-Id", "Q1jy5s6GeHfeK2yfaMjOiYpDLJhQ6bT6e9CpPiuI");
+                xhr.setRequestHeader("X-Parse-REST-API-Key", "hU6LGAL5789PBypEdScUWkNcnXXNv39SuzUSptNd");
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.onreadystatechange = function() {
+                  if (xhr.readyState == 4) {
+                    var result = JSON.parse(xhr.responseText);
+                    if (result.objectId) {
+                      alert("Created an object with id: " + result.objectId);
+                    }
                   }
                 }
+               
+                var data = JSON.stringify({ isFromApp: fromApp, title: userTitle, url: urlText, userEmail: emailText, userName: nameWeb});
+                xhr.send(data);
               }
-             
-              var data = JSON.stringify({ isFromApp: fromApp, title: userTitle, url: urlText, userEmail: emailText, userName: nameWeb});
-              xhr.send(data);
+
+              else {
+                alert("You are either a bot or have CSS disabled and didn't read the comment. Please leave the comment field blank and try again.");
+              }
             }
           </script>
         </div>
