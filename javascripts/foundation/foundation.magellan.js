@@ -80,13 +80,13 @@
               $expedition.data("magellan-fixed-position", fixed_position);
               if (fixed_position) {
                 $expedition.addClass('fixed');
-                $expedition.css({position:"fixed", top:0});
+                $expedition.css({position:"relative", top:0});
               } else {
                 $expedition.removeClass('fixed');
                 $expedition.css({position:"", top:""});
               }
               if (fixed_position && typeof attr != 'undefined' && attr != false) {
-                $expedition.css({position:"fixed", top:attr + "px"});
+                $expedition.css({position:"relative", top:attr + "px"});
               }
             }
           });
