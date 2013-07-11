@@ -116,6 +116,7 @@ h1 {
   font-size: 2em;
   font-style: normal;
   margin: 0.67em 0;
+  letter-spacing: -0.03em;
 }
 
 /**
@@ -431,11 +432,11 @@ body {
 
 /* line 249, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
 body {
-  background: white;
+  background: #f2f0df;
   background-image: url('../assets/video-still-wide-bkg.jpg');
   background-position: top center;
   background-repeat: no-repeat;
-  color: #222222;
+  color: #444444;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -2049,7 +2050,7 @@ p.submit{
 /* Default header styles */
 /* line 181, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Passion One', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'Francois One','Passion One', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-style: normal;
   color: #F47B1F;
   margin-top: 0.2em;
@@ -2459,7 +2460,7 @@ button, .button {
   padding-left: 1.5em;
   font-size: 1em;
   background-color: #F47B1F;
-  border-color: #c26219;
+  border-color: #c36219;
   color: white;
 }
 /* line 123, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_buttons.scss */
@@ -2669,16 +2670,17 @@ button.large, .button.large {
 @media only screen {
   /* line 207, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_buttons.scss */
   button, .button {
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    -webkit-box-shadow: 0px 4px 0px 0px #c36219;
+    box-shadow: 0px 4px 0px 0px #c36219;
     -webkit-transition: background-color 300ms ease-out;
     -moz-transition: background-color 300ms ease-out;
     transition: background-color 300ms ease-out;
   }
   /* line 68, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_global.scss */
   button:active, .button:active {
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0px 2px 0px 0px #c36219;
+    box-shadow: 0px 2px 0px 0px #c36219;
+    top: 2px;
   }
   /* line 215, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_buttons.scss */
   button.radius, .button.radius {
@@ -4349,7 +4351,6 @@ form.custom .custom.disabled {
 .contain-to-grid {
   width: 100%;
   background: #612FC8;
-  border-bottom: 5px solid #E3B70F;
   padding-top: 0px;
   z-index: 0;
   position: relative;
@@ -4562,8 +4563,8 @@ form.custom .custom.disabled {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-size: 1.6em;
-  font-family: "Passion One", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 1.4em;
+  font-family: "Francois One", "Passion One", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 400;
   letter-spacing: 0.03em
 }
@@ -6765,6 +6766,7 @@ a.th {
 #iphone-element > img {
   max-width: 300px;
   padding-top: 25px;
+  max-height: 629px;
 }
 
 #iphone-element > a {
@@ -6803,14 +6805,44 @@ a.th {
 }
 
 #urlField, #emailField{
-  font-family: 'Passion One', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'Francois One', 'Passion One', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 .blank {
   display:none;
 }
 
-#about, #features, #videos, #submit {
-  padding-top: 100px;
-  margin-top: -100px;
+.nav-padding-fix {
+    border-top:100px solid transparent;
+    margin-top:-100px;
+    -webkit-background-clip:padding-box;
+    -moz-background-clip:padding;
+    background-clip:padding-box;
+} 
+
+.full {
+  min-width: 100%;
+}
+
+.purpleback {
+  background-color: #612FC8;
+  background-image: url(../images/textures/tweed.png);
+}
+
+.yellowbottom {
+  border-bottom: 5px solid #E3B70F;
+}
+
+#phone-wrapper{
+  position:relative;
+}
+
+#iphone-screens{
+  position:absolute;
+  top:113px;
+  left:26px;
+  height: 428px;
+  width: 251px;
+  background-image: url(../images/screens.png);
+  background-position: 251px 0;
 }
