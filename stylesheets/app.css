@@ -6760,6 +6760,7 @@ a.th {
   position:absolute;
   top:420px;
   left:66.6666%;
+  z-index:99;
 }
 
 
