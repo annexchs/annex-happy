@@ -2012,6 +2012,7 @@ td {
 a {
   color: #612FC8;
   text-decoration: none;
+  font-weight: bold;
   line-height: inherit;
 }
 /* line 157, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
@@ -4409,12 +4410,11 @@ form.custom .custom.disabled {
 }
 
 .happy-logo {
-  height:130px;
+  height:180px;
   width:225px;
-  background-image: url('../images/happyLogo.png');
+  background-image: url('../images/happyLogo-icon.png');
   background-position: top left;
   background-repeat: no-repeat;
-  background-color: #E3B70F;
   position: relative;
   z-index: 99;
 }
@@ -6830,7 +6830,7 @@ a.th {
 }
 
 .yellowbottom {
-  border-bottom: 5px solid #E3B70F;
+  border-bottom: 5px solid #fffc00;
 }
 
 #phone-wrapper{
