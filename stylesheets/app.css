@@ -5998,7 +5998,7 @@ kbd {
   border-color: #F8C300;
   margin-bottom: 1.25em;
   padding: 1.25em;
-  background: #fffc00;
+  background: #F8D13A;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
@@ -6842,7 +6842,7 @@ a.th {
 }
 
 .yellowbottom {
-  border-bottom: 5px solid #fffc00;
+  border-bottom: 5px solid #E3B70F;
 }
 
 
