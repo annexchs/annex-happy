@@ -19,3 +19,5 @@ BLUE: #29A2DF
 GREEN: #27D55D
 
 DARKER YELLOW: #E3B70F
+
+  background-color: #E3B70F;
