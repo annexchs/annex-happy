@@ -213,27 +213,34 @@ We can’t consider videos over three minutes in length. And please remember –
               var userComment = $('#comment').val();
 
               var xhr = new XMLHttpRequest();
+              var filter = new RegExp("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
 
-              if (userComment === "") {
-                xhr.open("POST", "https://api.parse.com/1/classes/UserVideo", true);
-                xhr.setRequestHeader("X-Parse-Application-Id", "Q1jy5s6GeHfeK2yfaMjOiYpDLJhQ6bT6e9CpPiuI");
-                xhr.setRequestHeader("X-Parse-REST-API-Key", "hU6LGAL5789PBypEdScUWkNcnXXNv39SuzUSptNd");
-                xhr.setRequestHeader("Content-Type", "application/json");
-                xhr.onreadystatechange = function() {
-                  if (xhr.readyState == 4) {
-                    var result = JSON.parse(xhr.responseText);
-                    if (result.objectId) {
-                      alert("Created an object with id: " + result.objectId);
-                    }
-                  }
-                }
-               
-                var data = JSON.stringify({ isFromApp: fromApp, title: userTitle, url: urlText, userEmail: emailText, userName: nameWeb});
-                xhr.send(data);
+              if(!filter.test(emailText) || urlText === "") {
+                alert("Please enter a valid email address and link");
               }
 
               else {
-                alert("You are either a bot or have CSS disabled and didn't read the comment. Please leave the comment field blank and try again.");
+                if (userComment === "") {
+                  xhr.open("POST", "https://api.parse.com/1/classes/UserVideo", true);
+                  xhr.setRequestHeader("X-Parse-Application-Id", "Q1jy5s6GeHfeK2yfaMjOiYpDLJhQ6bT6e9CpPiuI");
+                  xhr.setRequestHeader("X-Parse-REST-API-Key", "hU6LGAL5789PBypEdScUWkNcnXXNv39SuzUSptNd");
+                  xhr.setRequestHeader("Content-Type", "application/json");
+                  xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4) {
+                      var result = JSON.parse(xhr.responseText);
+                      if (result.objectId) {
+                        alert("Submission Successful!");
+                      }
+                    }
+                  }
+                 
+                  var data = JSON.stringify({ isFromApp: fromApp, title: userTitle, url: urlText, userEmail: emailText, userName: nameWeb});
+                  xhr.send(data);
+                }
+
+                else {               
+                  alert("You are either a bot or have CSS disabled and didn't read the comment. Please leave the comment field blank and try again.");                
+                }
               }
             }
           </script>
