@@ -15,20 +15,27 @@
 
 </head>
 <body>
+
+  <div class="happyLogoContainer hide-for-touch" data-0="position:absolute; top:!500px" data-top-top="position:fixed;top:!0;" data-edge-strategy="set" >
+    <div class="happy-logo-area">
+      <div class="happy-logo"> </div>
+    </div>
+  </div>
+
 <div id="skrollr-body">
 
-	<!--VIDEO STUFF-->
-	<div class="video-spacer">
-	  <a href="#"></a>
-	</div>
+  <div class="touch-logo">
+    <img src="images/happyLogo-icon.png" class="show-for-touch">
+  </div>
 
+    <!--VIDEO STUFF-->
+  <div class="row video-spacer">
+    <div class="small-10 small-centered column">
+      <a href="#"></a>
+    </div>
+  </div>
 
 	<!--NAVIGATION BAR-->
-	<div class="happyLogoContainer show-for-medium-up" data-0="position:absolute; top:!500px" data-top-top="position:fixed;top:!0;" data-edge-strategy="set" >
-	  <div class="happy-logo-area">
-	    <div class="happy-logo"> </div>
-	  </div>
-	</div>
 	
 	<div class="contain-to-grid yellowbottom sticky">
 
@@ -36,7 +43,7 @@
 		<ul class="title-area">
 			<!-- Title Area -->
 			<li class="name happyLogoPlaceholder">
-			  <img src="images/happyLogo-text.png" class="hide-for-medium-up">
+			   
 			</li>
     <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		</ul>
@@ -61,14 +68,14 @@
     data-420="display:none;">
   </div> -->
 
-	<div id="iphone-element" class="hide-for-medium-down"
+	<div id="iphone-element" class="hide-for-touch"
 	  data-0="position:absolute; top:!420px" 
 	  data-top-top="position:fixed;top:!0;" 
 	  data-edge-strategy="set">
 		  <a class="button radius" href="#">Get Happy!</a>
       <div style="clear:both;"></div>
-      <div id="phone-wrapper" data-0="opacity:1;" data-2160="top:0px; opacity:1;" data-2680="z-index:1; top: -500px; opacity:0;">
-        <div id="iphone-screens" 
+      <div class="phone-wrapper" data-0="opacity:1;" data-2160="top:0px; opacity:1;" data-2680="z-index:1; top: -500px; opacity:0;">
+        <div class="iphone-screens" 
           data-0="background-position: 251px 0;" 
           data-420="background-position: 251px 0;" 
           data-1270="background-position: 251px 0;" 
@@ -126,7 +133,10 @@
           </div>
         </div>
     </div>
+    <div class="large-4 column show-for-touch">
+        <img src="images/splash-phone.png">
     </div>
+  </div>
 <!-- END OF ABOUT SECTION -->
 
 <!-- START OF FEATURES SECTION -->
@@ -159,6 +169,15 @@
         <i class="icon-heart icon-2x pull-left happy-pink"></i>
         <h3>Your Favorites</h3>
         <p>Lurem ipsoom dulur seet emet, cunsectetoor edeepiscing ileet. Um de hur de hur de hur. Murbee feetee-a ercoo noolla. Integer a fermentoom lurem, it hendrereet neesi. Soospendeesse-a nun messa neesi. </p>
+    </div>
+    <div class="large-4 column show-for-touch">
+      <h3>Screenshots</h3>
+      <ul class="small-block-grid-2">
+        <li><a class="th" href="images/todaysHappy.png"><img src="images/todaysHappy.png"></a></li>
+        <li><a class="th" href="images/todaysHappy.png"><img src="images/alarm.png"></a></li>
+        <li><a class="th" href="images/todaysHappy.png"><img src="images/peeps.png"></a></li>
+        <li><a class="th" href="images/todaysHappy.png"><img src="images/favs.png"></a></li>
+      </ul>
     </div>
   </div>
 </section>
