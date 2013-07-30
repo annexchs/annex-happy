@@ -2093,7 +2093,11 @@ h2 {
 
 /* line 200, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
 h3 {
-  font-size: 1.375em;
+  font-size: 1.275em;
+  color:#444444;
+  font-weight: 400;
+  vertical-align: baseline;
+  margin-top: 0.4em;
 }
 
 /* line 201, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
@@ -2317,7 +2321,7 @@ blockquote p {
   /* line 367, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_type.scss */
   h1 {
     font-size: 3em;
-    padding-top:0.5em;
+    padding-top:0.1em;
     font-weight: 400;
   }
 
@@ -5994,7 +5998,7 @@ kbd {
   border-color: #F8C300;
   margin-bottom: 1.25em;
   padding: 1.25em;
-  background: #fffc00;
+  background: #F8D13A;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
@@ -6760,29 +6764,37 @@ a.th {
   position:absolute;
   top:420px;
   left:66.6666%;
+  z-index:99;
 }
 
 
-#iphone-element > img {
-  max-width: 300px;
-  padding-top: 25px;
-  max-height: 629px;
+#phone-wrapper > img {
+  position: absolute;
+  max-width: 310px;
+  max-height: 635px;
+  z-index: 99;
 }
 
 #iphone-element > a {
   z-index: 99;
   width: 300px;
   margin-top: 10px;
+  margin-left: 5px;
 }
 
-#iphone-element-sticky-wrapper{
-
+#phone-wrapper{
+  position:relative;
 }
 
-@media only screen and (max-width: 767px) {
-  #iphone-element-sticky-wrapper{
-    display:none;
-  }
+#iphone-screens{
+  position:absolute;
+  top:113px;
+  left:31px;
+  height: 428px;
+  width: 251px;
+  background-image: url(../images/screens.png);
+  background-position: 251px 0;
+  z-index: 97;
 }
 
 .video-spacer{
@@ -6830,19 +6842,27 @@ a.th {
 }
 
 .yellowbottom {
-  border-bottom: 5px solid #fffc00;
+  border-bottom: 5px solid #E3B70F;
 }
 
-#phone-wrapper{
-  position:relative;
+
+.sunken-row {
+  background-color: #ebe8cf;
+  border-top: 4px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+  background-image: url(../images/textures/sunken-shadow-top.png);
+  background-repeat: repeat-x;
+  background-position: left top;
 }
 
-#iphone-screens{
-  position:absolute;
-  top:113px;
-  left:26px;
-  height: 428px;
-  width: 251px;
-  background-image: url(../images/screens.png);
-  background-position: 251px 0;
+#features p {
+  margin-bottom: 2.4em;
 }
+
+.happy-blue{color:#29A2DF;}
+.happy-pink{color:#DF296E;}
+.happy-purple{color:#612FC8;}
+.happy-orange{color:#F47B1F;}
+.happy-green{color:#27D55D;}
+.happy-gold{color:#E3B70F;}
+.happy-yellow{color: #fffc00;}
