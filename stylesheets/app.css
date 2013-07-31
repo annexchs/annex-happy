@@ -6770,7 +6770,7 @@ a.th {
 }
 
 
-.phone-wrapper > img {
+#phone-wrapper > img {
   position: absolute;
   max-width: 310px;
   max-height: 635px;
@@ -6784,7 +6784,7 @@ a.th {
   margin-left: 5px;
 }
 
-.phone-wrapper{
+#phone-wrapper{
   position:relative;
 }
 
