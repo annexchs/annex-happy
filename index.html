@@ -22,7 +22,15 @@
     </div>
   </div>
 
-<div id="skrollr-body">
+<script>
+  if (Modernizr.touch) {
+    alert("TOUCH :D");
+  } else {
+    document.write('<div id=\"skrollr-body\">');
+  }
+</script>
+
+
 
   <div class="touch-logo">
     <img src="images/happyLogo-icon.png" class="show-for-touch">
