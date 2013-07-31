@@ -22,19 +22,7 @@
     </div>
   </div>
 
-<script>
-  if (Modernizr.touch) {
-    alert("TOUCH :D");
-  } else {
-    document.write('<div id=\"skrollr-body\">');
-  }
-</script>
-
-
-
-  <div class="touch-logo">
-    <img src="images/happyLogo-icon.png" class="show-for-touch">
-  </div>
+<div id="skrollr-body">
 
     <!--VIDEO STUFF-->
   <div class="row video-spacer">
@@ -51,7 +39,9 @@
 		<ul class="title-area">
 			<!-- Title Area -->
 			<li class="name happyLogoPlaceholder">
-			   
+			   <div class="touch-logo">
+          <img src="images/happyLogo-icon.png" class="show-for-touch">
+        </div>
 			</li>
     <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		</ul>
@@ -358,7 +348,13 @@ We can’t consider videos over three minutes in length. And please remember –
 	
 	<script src="javascripts/foundation/foundation.joyride.js"></script>
 	
-  <script type="text/javascript" src="javascripts/skrollr.min.js"></script>
+  <script type="text/javascript">
+  if (!Modernizr.touch) {
+      document.write('<script src=\"javascripts\/skrollr.min.js\"><\/script>');
+  }
+  </script>
+
+
   
   <script>
     $(document).foundation();
