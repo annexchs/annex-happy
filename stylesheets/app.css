@@ -4413,7 +4413,7 @@ form.custom .custom.disabled {
 .happy-logo {
   height:180px;
   width:225px;
-  background-image: url('../images/happyLogo-icon-orange.png');
+  background-image: url('../images/happyLogo-icon-new.png');
   background-position: top left;
   background-repeat: no-repeat;
   position: relative;
@@ -6788,13 +6788,13 @@ a.th {
   position:relative;
 }
 
-.iphone-screens{
+#iphone-screens{
   position:absolute;
   top:113px;
   left:31px;
   height: 428px;
   width: 251px;
-  background-image: url(../images/screens.png);
+  background-image: url(../images/screens-@1x.png);
   background-position: 251px 0;
   z-index: 97;
 }
@@ -6901,7 +6901,7 @@ a.th {
 }
 
 .yellowbottom {
-  border-bottom: 5px solid #E3B70F;
+  border-bottom: 5px solid #fbe43d;
 }
 
 
