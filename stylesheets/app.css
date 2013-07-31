@@ -6820,6 +6820,13 @@ a.th {
     background-position: top center;
     background-repeat: no-repeat;
   }
+  .touch-logo img{
+    position:absolute;
+    z-index: 99;
+    top:0px;
+    width: 170px;
+    height: 135px;
+  }
   .video-spacer a{
     min-width: 100%;
     min-height: 250px;
@@ -6846,7 +6853,8 @@ a.th {
   .touch-logo img{
     position:absolute;
     z-index: 99;
-    top:257px;
+    top:0px;
+    left:32%;
     width:113px;
     height: 90px;
   }
