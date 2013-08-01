@@ -34,14 +34,14 @@
 	<!--NAVIGATION BAR-->
 	
 	<div class="contain-to-grid yellowbottom sticky">
-
+    <div class="touch-logo">
+      <img src="images/happyLogo-icon-new.png" class="show-for-touch">
+    </div>
 	<nav class="top-bar">
 		<ul class="title-area">
 			<!-- Title Area -->
 			<li class="name happyLogoPlaceholder">
-			   <div class="touch-logo">
-          <img src="images/happyLogo-icon-new.png" class="show-for-touch">
-        </div>
+
 			</li>
     <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
 		</ul>
@@ -134,7 +134,7 @@
         </div>
     </div>
     <div class="large-4 column show-for-touch">
-        <img src="images/splash-phone.png">
+        <img class="hide-for-small" src="images/splash-phone.png">
     </div>
   </div>
 <!-- END OF ABOUT SECTION -->
@@ -172,11 +172,11 @@
     </div>
     <div class="large-4 column show-for-touch">
       <h3>Screenshots</h3>
-      <ul class="small-block-grid-2">
-        <li><a class="th" href="images/todaysHappy.png"><img src="images/todaysHappy.png"></a></li>
-        <li><a class="th" href="images/todaysHappy.png"><img src="images/alarm.png"></a></li>
-        <li><a class="th" href="images/todaysHappy.png"><img src="images/peeps.png"></a></li>
-        <li><a class="th" href="images/todaysHappy.png"><img src="images/favs.png"></a></li>
+      <ul class="small-block-grid-2" data-clearing>
+        <li><a class="th" href="images/screens/home.png"><img src="images/screens/home.png"></a></li>
+        <li><a class="th" href="images/screens/alarm.png"><img src="images/screens/alarm.png"></a></li>
+        <li><a class="th" href="images/screens/peeps.png"><img src="images/screens/peeps.png"></a></li>
+        <li><a class="th" href="images/screens/favs.png"><img src="images/screens/favs.png"></a></li>
       </ul>
     </div>
   </div>
@@ -364,6 +364,12 @@ We can’t consider videos over three minutes in length. And please remember –
   
   <script>
     $(document).foundation();
+  </script>
+
+  <script>
+    $(document).foundation('orbit', {
+      slide_number: false
+    });
   </script>
   
 	<script type="text/javascript">
