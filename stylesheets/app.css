@@ -4413,7 +4413,7 @@ form.custom .custom.disabled {
 .happy-logo {
   height:180px;
   width:225px;
-  background-image: url('../images/happyLogo-icon-orange.png');
+  background-image: url('../images/happyLogo-icon-new.png');
   background-position: top left;
   background-repeat: no-repeat;
   position: relative;
@@ -4446,12 +4446,10 @@ form.custom .custom.disabled {
 
 .happyLogoPlaceholder{
   width:225px;
+  position: relative;
 }
 
-.happyLogoPlaceholder img{
-  height:65px;
-  position: absolute;
-}
+
 /* line 112, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
 .top-bar .name {
   height: 65px;
@@ -6770,7 +6768,7 @@ a.th {
 }
 
 
-.phone-wrapper > img {
+#phone-wrapper > img {
   position: absolute;
   max-width: 310px;
   max-height: 635px;
@@ -6784,17 +6782,17 @@ a.th {
   margin-left: 5px;
 }
 
-.phone-wrapper{
+#phone-wrapper{
   position:relative;
 }
 
-.iphone-screens{
+#iphone-screens{
   position:absolute;
   top:113px;
   left:31px;
   height: 428px;
   width: 251px;
-  background-image: url(../images/screens.png);
+  background-image: url(../images/screens-@1x.png);
   background-position: 251px 0;
   z-index: 97;
 }
@@ -6819,6 +6817,13 @@ a.th {
     background-image: url('../assets/video-still-wide-bkg.jpg');
     background-position: top center;
     background-repeat: no-repeat;
+  }
+  .touch-logo img{
+    position:absolute;
+    z-index: 99;
+    top:0px;
+    width: 170px;
+    height: 135px;
   }
   .video-spacer a{
     min-width: 100%;
@@ -6846,9 +6851,10 @@ a.th {
   .touch-logo img{
     position:absolute;
     z-index: 99;
-    top:257px;
-    width:113px;
-    height: 90px;
+    top:0px;
+    left:32%;
+    width: 170px;
+    height: 135px;
   }
   .video-spacer a{
     min-width: 100%;
@@ -6893,7 +6899,7 @@ a.th {
 }
 
 .yellowbottom {
-  border-bottom: 5px solid #E3B70F;
+  border-bottom: 5px solid #fbe43d;
 }
 
 
@@ -6909,7 +6915,6 @@ a.th {
 #features p {
   margin-bottom: 2.4em;
 }
-
 
 
 
