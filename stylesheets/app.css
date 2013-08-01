@@ -4446,12 +4446,10 @@ form.custom .custom.disabled {
 
 .happyLogoPlaceholder{
   width:225px;
+  position: relative;
 }
 
-.happyLogoPlaceholder img{
-  height:65px;
-  position: absolute;
-}
+
 /* line 112, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
 .top-bar .name {
   height: 65px;
@@ -6855,8 +6853,8 @@ a.th {
     z-index: 99;
     top:0px;
     left:32%;
-    width:113px;
-    height: 90px;
+    width: 170px;
+    height: 135px;
   }
   .video-spacer a{
     min-width: 100%;
@@ -6917,7 +6915,6 @@ a.th {
 #features p {
   margin-bottom: 2.4em;
 }
-
 
 
 
