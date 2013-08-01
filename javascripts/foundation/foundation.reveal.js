@@ -20,7 +20,9 @@
       open: function(){},
       opened: function(){},
       close: function(){},
-      closed: function(){},
+      closed: function(){
+        $('#happyPromoVideo').get(0).pause();
+      },
       bg : $('.reveal-modal-bg'),
       css : {
         open : {
@@ -294,6 +296,8 @@
         iframe.attr('src', 'about:blank');
         video.hide();
       }
+
+      video.get(0).pause();
     },
 
     open_video : function (e) {
