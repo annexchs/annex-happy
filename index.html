@@ -14,8 +14,10 @@
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200|Francois+One' rel='stylesheet' type='text/css'>
   <script src="javascripts/vendor/custom.modernizr.js"></script>
   <link href="stylesheets/videojs.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 <body>
+  <div id="black-box"></div>
 
   <div class="happyLogoContainer hide-for-touch" data-0="position:absolute; top:!500px" data-top-top="position:fixed;top:!0;" data-edge-strategy="set" >
     <div class="happy-logo-area">
@@ -24,6 +26,8 @@
   </div>
 
 <div id="skrollr-body">
+
+
 
 <!-- BEGIN IPHONE-ELEMENT -->
   <!-- <div id="iphone-screens-abs" 
@@ -60,12 +64,13 @@
 <!--VIDEO STUFF-->
 
   <div class="row">
-    <div class="small-12 column video-spacer">
+    <div id="vid-container" class="small-12 column video-spacer">
       <!--<a href="#" data-reveal-id="videoModal" id='playButton'></a>-->
-      <video id="example_video_1" class="video-js vjs-default-skin"
-        controls preload="auto"
-        poster="assets/video-still-wide-bkg.jpg"
-        data-setup='{"example_option":true}'>
+      <video id="happy-hero-vid-touch" class="show-for-touch" controls poster="images/vid-mobile-poster.jpg" src="assets/compressedvid.mp4">
+      </video>
+      <video id="happy-hero-vid" class="video-js vjs-default-skin hide-for-touch"
+        controls preload="metadata"
+        poster="images/trans.png" data-setup='{"example_option":true}'>
        <source src="assets/compressedvid.mp4" type='video/mp4' />
       </video>
     </div>
@@ -330,8 +335,6 @@ We can’t consider videos over three minutes in length. And please remember –
   ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
   '.js><\/script>')
   </script>
-  
-  <script src="javascripts/vendor/jquery.js"></script>
 
   <script src="javascripts/foundation/foundation.js"></script>
 	
@@ -363,29 +366,26 @@ We can’t consider videos over three minutes in length. And please remember –
 	
 	<script src="javascripts/foundation/foundation.joyride.js"></script>
 
-  <script src="http://vjs.zencdn.net/4.1/video.js"></script>
+  <script src="javascripts/video.dev.js"></script>
+    <script>
+    _V_.options.flash.swf = "javascripts/video-js.swf"
+    </script>
+    <script>
+      $( "#vid-container" ).click(function() {
+        $( "#black-box" ).fadeTo('slow', 0.7);
+      });
+    </script>
 	
   <script type="text/javascript">
   if (!Modernizr.touch) {
       document.write('<script src=\"javascripts\/skrollr.min.js\"><\/script>');
   }
   </script>
-
-  <script type="text/javascript">
-    $('#playButton').click(function(){
-      $('#happyPromoVideo').get(0).play();
-    });
-  </script>
   
   <script>
     $(document).foundation();
   </script>
 
-  <script>
-    $(document).foundation('orbit', {
-      slide_number: false
-    });
-  </script>
   
 	<script type="text/javascript">
 	window.onload = function() {
