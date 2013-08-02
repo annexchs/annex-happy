@@ -13,6 +13,7 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300,300italic|Passion+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300,200|Francois+One' rel='stylesheet' type='text/css'>
   <script src="javascripts/vendor/custom.modernizr.js"></script>
+  <link href="stylesheets/videojs.css" rel="stylesheet">
 </head>
 <body>
 
@@ -24,14 +25,53 @@
 
 <div id="skrollr-body">
 
-    <!--VIDEO STUFF-->
-  <div class="row video-spacer">
-    <div class="small-10 small-centered column">
-      <a href="#" data-reveal-id="videoModal" id='playButton'></a>
+<!-- BEGIN IPHONE-ELEMENT -->
+  <!-- <div id="iphone-screens-abs" 
+    data-0="display:block;"
+    data-420="display:none;">
+  </div> -->
+  <div class="row">
+    <div class="large-12 columns" style="position: relative">
+      <div id="iphone-element" class="hide-for-touch"
+        data-0="position:absolute; top:!490px" 
+        data-top-top="position:fixed;top:!0;" 
+        data-edge-strategy="set">
+          <a class="button radius" href="#">Get Happy!</a>
+          <div style="clear:both;"></div>
+          <div id="phone-wrapper" data-0="opacity:1;" data-2160="top:0px; opacity:1;" data-2680="z-index:1; top: -500px; opacity:0;">
+            <img src="images/white-iphone-300.png">
+            <div id="iphone-screens" 
+              data-0="background-position: 251px 0;" 
+              data-420="background-position: 251px 0;" 
+              data-1970="background-position: 251px 0;" 
+              data-1990="background-position: 502px 0;" 
+              data-2255="background-position: 502px 0;" 
+              data-2275="background-position: 753px 0;" 
+              data-2400="background-position: 753px 0;" 
+              data-2420="background-position: 1004px 0;" 
+              data-2420="background-position: 1004px 0;" 
+              data-2420="background-position: 1004px 0;">
+            </div>
+          </div>
+      </div>
     </div>
   </div>
 
-	<!--NAVIGATION BAR-->
+<!--VIDEO STUFF-->
+
+  <div class="row">
+    <div class="small-12 column video-spacer">
+      <!--<a href="#" data-reveal-id="videoModal" id='playButton'></a>-->
+      <video id="example_video_1" class="video-js vjs-default-skin"
+        controls preload="auto"
+        poster="assets/video-still-wide-bkg.jpg"
+        data-setup='{"example_option":true}'>
+       <source src="assets/compressedvid.mp4" type='video/mp4' />
+      </video>
+    </div>
+  </div>
+
+<!--NAVIGATION BAR-->
 	
 	<div class="contain-to-grid yellowbottom sticky">
     <div class="touch-logo">
@@ -60,34 +100,7 @@
 	</div>
 
 <!-- END NAVIGATION BAR -->
-<!-- BEGIN IPHONE-ELEMENT -->
-  <!-- <div id="iphone-screens-abs" 
-    data-0="display:block;"
-    data-420="display:none;">
-  </div> -->
 
-	<div id="iphone-element" class="hide-for-touch"
-	  data-0="position:absolute; top:!420px" 
-	  data-top-top="position:fixed;top:!0;" 
-	  data-edge-strategy="set">
-		  <a class="button radius" href="#">Get Happy!</a>
-      <div style="clear:both;"></div>
-      <div id="phone-wrapper" data-0="opacity:1;" data-2160="top:0px; opacity:1;" data-2680="z-index:1; top: -500px; opacity:0;">
-        <img src="images/white-iphone-300.png">
-        <div id="iphone-screens" 
-          data-0="background-position: 251px 0;" 
-          data-420="background-position: 251px 0;" 
-          data-1970="background-position: 251px 0;" 
-          data-1990="background-position: 502px 0;" 
-          data-2255="background-position: 502px 0;" 
-          data-2275="background-position: 753px 0;" 
-          data-2400="background-position: 753px 0;" 
-          data-2420="background-position: 1004px 0;" 
-          data-2420="background-position: 1004px 0;" 
-          data-2420="background-position: 1004px 0;">
-        </div>
-      </div>
-	</div>
 
 <!-- END IPHONE_ELEMENT -->
 
@@ -349,6 +362,8 @@ We can’t consider videos over three minutes in length. And please remember –
 	<script src="javascripts/foundation/foundation.reveal.js"></script>
 	
 	<script src="javascripts/foundation/foundation.joyride.js"></script>
+
+  <script src="http://vjs.zencdn.net/4.1/video.js"></script>
 	
   <script type="text/javascript">
   if (!Modernizr.touch) {
