@@ -66,13 +66,12 @@
   <div class="row">
     <div id="vid-container" class="small-12 column video-spacer">
       <!--<a href="#" data-reveal-id="videoModal" id='playButton'></a>-->
-      <video id="happy-hero-vid-touch" class="show-for-touch" controls poster="images/vid-mobile-poster.jpg" src="assets/compressedvid.mp4">
+      <video id="happy-hero-vid-touch" class="show-for-touch" controls preload="none" poster="images/vid-mobile-poster.jpg" src="assets/happy.mov">
       </video>
-      <video id="happy-hero-vid" class="video-js vjs-default-skin hide-for-touch"
-        controls preload="metadata"
-        poster="images/trans.png" data-setup='{"example_option":true}'>
-       <source src="assets/happy.mov" type='video/mp4' />
-       <source src="assets/happy-firefox.mov" type='video/ogg' />
+      <video id="happy-hero-vid" class="video-js vjs-default-skin hide-for-touch" controls preload="none" poster="images/trans.png" data-setup='{"example_option":true}'>
+         <source src="assets/happy.mov" type='video/mp4' />
+         <source src="assets/happy-firefox.mov" type='video/ogg' />
+         <img src="images/vid-mobile-poster.jpg" alt="">
       </video>
     </div>
   </div>
@@ -81,7 +80,7 @@
 	
 	<div class="contain-to-grid yellowbottom sticky">
     <div class="touch-logo">
-      <img src="images/happyLogo-icon-new.png" class="show-for-touch">
+      <img src="images/icon-@2x.png" class="show-for-touch">
     </div>
 	<nav class="top-bar">
 		<ul class="title-area">
