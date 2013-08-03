@@ -4354,7 +4354,7 @@ form.custom .custom.disabled {
   width: 100%;
   background: #612FC8;
   padding-top: 0px;
-  z-index: 0;
+  z-index: 51;
   position: relative;
 }
 /* line 71, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
@@ -4686,7 +4686,7 @@ form.custom .custom.disabled {
 
 /* line 350, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
 .top-bar-js-breakpoint {
-  width: 58.75em !important;
+  width: 38.75em !important;
   visibility: hidden;
 }
 
@@ -4695,7 +4695,7 @@ form.custom .custom.disabled {
   display: block;
 }
 
-@media only screen and (min-width: 58.75em) {
+@media only screen and (min-width: 38.75em) {
   /* line 359, ../../../../../../../usr/local/rvm/gems/ruby-2.0.0-p195/gems/zurb-foundation-4.2.2/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: #612FC8;
@@ -6762,9 +6762,9 @@ a.th {
 
 #iphone-element{
   position:absolute;
-  top:420px;
-  left:66.6666%;
+  top:490px; 
   z-index:99;
+  margin-left: 660px;
 }
 
 
@@ -6808,10 +6808,23 @@ a.th {
   z-index: 1;
 }
 
-@media only screen and (min-width: 768px) {
+/* MEDIA QUERY HACKS ---------------------------------------------------------------------------------- */
+
+/* STUFF FOR DESKTOP AND LANDSCAPE TABLET */
+@media only screen and (min-width: 1024px) {
   .video-spacer{
     height:565px;
-    padding-top: 100px;
+    padding:0;
+    z-index: 50;
+  }
+  #black-box {
+    position:absolute;
+    width:100%;
+    height:565px;
+    top:0px;
+    background-color: #000;
+    z-index: 1;
+    opacity: 0;
   }
   #skrollr-body {
     background-image: url('../assets/video-still-wide-bkg.jpg');
@@ -6821,9 +6834,61 @@ a.th {
   .touch-logo img{
     position:absolute;
     z-index: 99;
-    top:0px;
-    width: 170px;
+    top:-40px;
+    left:30px;
+    width: 135px;
     height: 135px;
+    z-index: 99;
+  }
+  div.fixed > div.touch-logo img{
+    top:3px;
+    width:100px;
+    height: 100px;
+  }
+  .nav-padding-fix {
+    border-top:100px solid transparent;
+    margin-top:-100px;
+    -webkit-background-clip:padding-box;
+    -moz-background-clip:padding;
+    background-clip:padding-box;
+  } 
+}
+
+/* PORTRAIT TABLET STUFF */
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+  .video-spacer{
+    height:435px;
+    padding:0;
+    z-index: 50;
+  }
+  #black-box {
+    position:absolute;
+    width:100%;
+    height:435px;
+    top:0px;
+    background-color: #000;
+    z-index: 1;
+    opacity: 0;
+  }
+  #skrollr-body {
+    background-image: url('../assets/video-still-wide-bkg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 796px 270px;
+  }
+  .touch-logo img{
+    position:absolute;
+    z-index: 99;
+    top:-35px;
+    left:30px;
+    width: 125px;
+    height: 125px;
+    z-index: 99;
+  }
+  div.fixed > div.touch-logo img{
+    top:3px;
+    width:100px;
+    height: 100px;
   }
   .video-spacer a{
     min-width: 100%;
@@ -6844,13 +6909,34 @@ a.th {
   } 
 }
 
+/* PHONES */
 @media only screen and (max-width: 767px) {
+  .top-bar{
+    height: 45px;
+    line-height: 25px;
+  }
+  .top-bar-section ul li > a {
+    padding: 3px 12px 3px 12px;
+    font-size: 1.2em;
+  }
+  .top-bar .name {
+    height:45px;
+  }
   .video-spacer{
+    height:180px;
+    padding:0;
+  }
+  #black-box {
+    position:absolute;
+    width:100%;
     height:265px;
-    padding-top: 100px;
+    top:0px;
+    background-color: #000;
+    z-index: 1;
+    opacity: 0;
   }
   #skrollr-body {
-    background-image: url('../assets/video-still-wide-bkg.jpg');
+    background-image: none;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 796px 270px;
@@ -6858,10 +6944,16 @@ a.th {
   .touch-logo img{
     position:absolute;
     z-index: 99;
-    top:0px;
-    left:30%;
-    width: 127px;
-    height: 101px;
+    top:-20px;
+    left:34%;
+    width: 100px;
+    height: 100px;
+  }
+  div.fixed > div.touch-logo img{
+    top:2px;
+    width:70px;
+    height:70px;
+    left: 0.9375em;
   }
   .video-spacer a{
     min-width: 100%;
@@ -6926,6 +7018,16 @@ ul.small-block-grid-2 > li {
     clear: none !important;
     margin-right: 0;
   }
+
+#happy-hero-vid {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#happy-hero-vid-touch {
+  width: 100% !important;
+  height: 100% !important;
+}
 
 
 .happy-blue{color:#29A2DF;}
